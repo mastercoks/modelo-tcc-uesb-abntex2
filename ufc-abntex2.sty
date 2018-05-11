@@ -1,0 +1,163 @@
+%%
+%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para a Universidade Federal do Ceará
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%%
+%% The Current Maintainer of this work is Luan Falcão Daniel Santos, luan_aero@yahoo.com.br
+%%
+%% Further information about abnTeX2 are available on http://abntex2.googlecode.com/
+%%
+
+% ---
+% INICIO DAS CUSTOMIZACOES PARA A UNIVERSIDADE FEDERAL DO CEARA
+% ---
+\usepackage{float}
+\usepackage{graphicx}
+
+\newcommand{\membroumname}{Membro um:}
+\newcommand{\membrodoisname}{Membro dois:}
+
+% Comandos de dados - Membro da banca um
+\providecommand{\imprimirmembroumRotulo}{}
+\providecommand{\imprimirmembroum}{}
+\newcommand{\membroum}[2][\membroumname]%
+  {\renewcommand{\imprimirmembroumRotulo}{#1}%
+   \renewcommand{\imprimirmembroum}{#2}}
+   
+% Comandos de dados - Membro da banca dois
+\providecommand{\imprimirmembrodoisRotulo}{}
+\providecommand{\imprimirmembrodois}{}
+\newcommand{\membrodois}[2][\membrodoisname]%
+  {\renewcommand{\imprimirmembrodoisRotulo}{#1}%
+   \renewcommand{\imprimirmembrodois}{#2}}
+
+% alterando a capa
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    \center
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{imagens/uesb-brasao.png}
+\end{figure}
+    {\bfseries\Large\imprimirinstituicao\vspace*{0.5cm}}
+    \par
+    {\bfseries\Large\imprimircampus}
+    \par
+    {\bfseries\Large\imprimircurso\vspace*{3.5cm}}
+
+    {\bfseries\Large\imprimirautor\vspace*{3.5cm}}
+
+    {\bfseries\Large\imprimirtitulo}
+    \vspace*{\fill}
+
+    {\bfseries\Large\imprimirlocal}
+    \par
+    {\bfseries\Large\imprimirdata}
+
+    \vspace*{1cm}
+  \end{capa}
+}
+
+
+% folha de rosto
+
+\makeatletter
+
+\renewcommand{\folhaderostocontent}{
+\begin{center}
+{\bfseries\Large\imprimirautor}
+
+\vspace*{3.5cm}
+
+{\bfseries\Large\imprimirtitulo}
+
+\vspace*{\fill}
+
+\abntex@ifnotempty{\imprimirpreambulo}{%
+  \hspace{.45\textwidth}
+  \begin{minipage}{.5\textwidth}
+  \SingleSpacing
+  \imprimirpreambulo
+  \end{minipage}%
+}%
+
+\abntex@ifnotempty{\imprimirorientador}{%
+  \hspace{.45\textwidth}
+  \begin{minipage}{.5\textwidth}
+  \SingleSpacing
+  Orientador: \imprimirorientador
+  \SingleSpacing
+  \abntex@ifnotempty{\imprimircoorientador}{%
+    Co-Orientador: \imprimircoorientador
+  }%
+  \end{minipage}%
+  \vspace*{\fill}
+}%
+
+\vspace*{\fill}
+
+{\bfseries\Large\imprimirlocal}
+\par
+{\bfseries\Large\imprimirdata}
+\vspace*{1cm}
+\end{center}
+}
+
+\makeatother
+
+% ---
+% FIM DAS CUSTOMIZACOES PARA A UNIVERSIDADE FEDERAL DO CEARA
+% ---
+
+\providecommand{\imprimirsigla}{}
+\newcommand{\sigla}[1]{\renewcommand{\imprimirsigla}{#1}}
+
+\providecommand{\imprimircampus}{}
+\newcommand{\campus}[1]{\renewcommand{\imprimircampus}{#1}}
+
+\providecommand{\imprimircurso}{}
+\newcommand{\curso}[1]{\renewcommand{\imprimircurso}{#1}}
+
+\providecommand{\imprimirdataapresentacao}{}
+\newcommand{\dataapresentacao}[1]{\renewcommand{\imprimirdataapresentacao}{#1}}
+
+\providecommand{\imprimirinstOrientador}{}
+\newcommand{\instOrientador}[1]{\renewcommand{\imprimirinstOrientador}{#1}}
+
+\providecommand{\imprimirdepartamentoorientador}{}
+\newcommand{\departamentoorientador}[1]{\renewcommand{\imprimirdepartamentoorientador}{#1}}
+
+\providecommand{\imprimirtitulacaoorientador}{}
+\newcommand{\titulacaoorientador}[1]{\renewcommand{\imprimirtitulacaoorientador}{#1}}
+
+\providecommand{\imprimirnomeexamum}{}
+\newcommand{\nomeexamum}[1]{\renewcommand{\imprimirnomeexamum}{#1}}
+
+\providecommand{\imprimirinstexamum}{}
+\newcommand{\instexamum}[1]{\renewcommand{\imprimirinstexamum}{#1}}
+
+\providecommand{\imprimirdepartamentoexamum}{}
+\newcommand{\departamentoexamum}[1]{\renewcommand{\imprimirdepartamentoexamum}{#1}}
+
+\providecommand{\imprimirtitulacaoexamum}{}
+\newcommand{\titulacaoexamum}[1]{\renewcommand{\imprimirtitulacaoexamum}{#1}}
+
+\providecommand{\imprimirnomeexamdois}{}
+\newcommand{\nomeexamdois}[1]{\renewcommand{\imprimirnomeexamdois}{#1}}
+
+\providecommand{\imprimirinstexamdois}{}
+\newcommand{\instexamdois}[1]{\renewcommand{\imprimirinstexamdois}{#1}}
+
+\providecommand{\imprimirdepartamentoexamdois}{}
+\newcommand{\departamentoexamdois}[1]{\renewcommand{\imprimirdepartamentoexamdois}{#1}}
+
+\providecommand{\imprimirtitulacaoexamdois}{}
+\newcommand{\titulacaoexamdois}[1]{\renewcommand{\imprimirtitulacaoexamdois}{#1}}

@@ -1,0 +1,120 @@
+\include{fixos/pacoteseclass}
+
+% Preambulo (Editar para mudar as variaveis do documento)
+\include{editaveis/preambulo}
+
+\begin{document}
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+% Capa
+\imprimircapa
+% Folha de rosto (* indica que haverá a ficha bibliográfica)
+\imprimirfolhaderosto*
+
+% Ficha Bibliográfica
+\include{fixos/fichabibliografica}
+
+% Errata
+%\include{editaveis/errata}
+
+% Folha de Aprovação
+\include{editaveis/folhadeaprovacao}
+%\imprimirfolhadeaprovacao
+
+% Dedicatória
+\include{editaveis/dedicatoria}
+
+% Agradecimentos
+\include{editaveis/agradecimentos}
+
+% Epígrafe
+\include{editaveis/epigrafe}
+
+% Resumo
+\include{editaveis/resumo}
+
+% Abstract
+\include{editaveis/abstract}
+
+% Lista de ilustrações
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+% Lista de tabelas
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+% Abreviaturas e Siglas
+\include{editaveis/siglas}
+
+% Símbolos
+%\include{editaveis/simbolos}
+
+% Sumário
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ----------------------------------------------------------
+% PARTE I
+% ----------------------------------------------------------
+\part{Preparação da pesquisa}
+
+\include{textuais/introducao}
+
+% ----------------------------------------------------------
+% PARTE II
+% ----------------------------------------------------------
+\part{Referenciais teóricos}
+
+\include{textuais/tiverde}
+
+% ----------------------------------------------------------
+% PARTE III
+% ----------------------------------------------------------
+\part{Levantamento amostral}
+
+% ----------------------------------------------------------
+% PARTE III
+% ----------------------------------------------------------
+\part{Resultados}
+
+% ----------------------------------------------------------
+% Finaliza a parte no bookmark do PDF para que se inicie o bookmark na raiz e adiciona espaço de parte no Sumário
+% ----------------------------------------------------------
+\phantompart
+
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% Referências bibliográficas
+\bibliography{bibtex/referencias}
+
+% Apêndices
+%\include{editaveis/apendices}
+
+% Anexos
+%\include{editaveis/anexos}
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+\phantompart
+\printindex
+%---------------------------------------------------------------------
+
+\end{document}
