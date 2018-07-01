@@ -161,3 +161,34 @@
 
 \providecommand{\imprimirtitulacaoexamdois}{}
 \newcommand{\titulacaoexamdois}[1]{\renewcommand{\imprimirtitulacaoexamdois}{#1}}
+
+\newcommand{\UECEtab}[3]{\IBGEtab{#1}{#2}{#3}}
+
+% Espaco entre o caption e o algoritmo
+%\SetAlCapSkip{\onelineskip}
+
+% Distance between floats on the top or the bottom and the text;
+\setlength{\textfloatsep}{18pt plus 2pt minus 2pt}
+
+% Distance between floats inserted inside the page text (using h) and the text proper.
+\setlength{\intextsep}{18pt plus 2pt minus 2pt}
+
+\newcommand{\Caption}[1]{ %
+	\begin{Spacing}{1.5} %
+       	\caption{#1} %
+   	\end{Spacing} %
+}
+
+\newcommand{\Fonte}[2][\fontename]{ %
+	\vspace{-3pt}
+%	\vspace{8pt}
+ 		\fonte[\normalfont{#1}]{\normalfont{#2}}
+ 	\vspace{-5pt}
+}
+
+\newcommand{\FonteFigura}[2][\fontename]{ %
+	\vspace{-8pt}
+%	\vspace{8pt}
+ 		\fonte[\normalfont{#1}]{\normalfont{#2}}
+ 	\vspace{-10pt}
+}
